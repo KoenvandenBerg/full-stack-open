@@ -1,0 +1,15 @@
+title Full Stack Open - Exercise 0.6
+
+note over Client:
+The code in spa.js, which has been requested 
+upon browsing to the notes page, gets executed 
+by the browser. Part of this code is a POST 
+request to the server when a new note is created.
+end note
+
+Client->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Server-->Client: Response with status code 201 and payload {"message":"note created"}
+
+note over Client:
+Client logs the response text.
+end note
