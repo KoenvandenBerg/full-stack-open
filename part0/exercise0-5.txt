@@ -1,0 +1,25 @@
+title Full Stack Open - Exercise 0.5
+
+Client->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server-->Client: HTML code
+
+
+Client->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Client: main.css
+
+Client->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Client: spa.js
+
+note over Client:
+Browser executes the 
+code in spa.js
+end note
+
+Client->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Client: data.json
+
+note over Client:
+The onreadystatechange event handler
+tells the browser to rerender the page, 
+to show the notes contained in data.json.
+end note
