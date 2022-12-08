@@ -1,6 +1,6 @@
 const Header = (props) => (
     <>
-    <h1>{props.text}</h1>
+    <h1>{props.course.name}</h1>
     </>
 )
 

@@ -1,6 +1,6 @@
 const Total = (props) => {
 
-    let sum = props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises
+    let sum = props.parts.parts[0].exercises + props.parts.parts[1].exercises + props.parts.parts[2].exercises
 
     return  (
       <>
