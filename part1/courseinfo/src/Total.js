@@ -1,10 +1,6 @@
 const Total = (props) => {
 
-    let sum = 0;
-
-    for (let number of props.exerciseCount) {
-        sum += number;
-    }
+    let sum = props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises
 
     return  (
       <>
