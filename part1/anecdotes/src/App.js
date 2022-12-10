@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Button from './Button'
 
 const App = () => {
   const anecdotes = [
@@ -12,14 +13,24 @@ const App = () => {
   ]
   
   const [selected, setSelected] = useState(0)
+  const [points, setPoints] = useState(new Array(anecdotes.length).fill(0))
 
-  const randomIndex = (array) => Math.floor((Math.random() * array.length))
+  const randomIndex = array => Math.floor((Math.random() * array.length))
+
+  const vote = () => {
+    const pointsCopy = [...points]
+    pointsCopy[selected]++
+    setPoints(pointsCopy)
+  }
 
   return (
     <div>
-      {anecdotes[selected]}
+      <p>{anecdotes[selected]}</p>
+      <p>Has {points[selected]} votes</p>
       <br />
-      <button onClick={() => setSelected(randomIndex(anecdotes))}>Next</button>
+      <Button onClick={() => vote()} text={"Vote"} />
+      <Button onClick={() => setSelected(randomIndex(anecdotes))} text={"Next"} />
+
     </div>
   )
 }
