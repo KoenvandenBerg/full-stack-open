@@ -1,5 +1,5 @@
 const Content = (props) => {
-
+    console.log('props value: ', props)
     return (
       <>
         <p>
